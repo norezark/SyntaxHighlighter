@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SyntaxHighLighter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="highlight.pack.js"></script>
+    <link id="css" rel="stylesheet" type="text/css" media="screen" href="styles/monokai.css" />
+</head>
+<body>
+    <span>
+        コード入力
+        <br>
+        <textarea autofocus id="input" oninput="output()"></textarea>
+    </span>
+    <span>
+        <br>
+        言語
+        <br>
+        <select id="selectLanguage" onchange="output()"></select>
+    </span>
+    <span>
+        <br>
+        スタイル
+        <br>
+        <select id="selectStyle" onchange="output()"></select>
+    </span>
+    <br>
+    <span>
+        コード出力
+        <br>
+        <pre id="output" class="hljs"></pre>
+    </span>
+</body>
+</html>
