@@ -32,7 +32,7 @@ window.onload = function () {
         var option = document.createElement("option");
         option.value = style;
         option.text = style;
-        if (style == "monokai") option.setAttribute("selected", "");
+        if (style == "monokai-sublime") option.setAttribute("selected", "");
         selectStyle.appendChild(option);
     });
 }
@@ -41,5 +41,8 @@ function copyCode(){
     var output = document.getElementById("output");
     var range = document.createRange();
     range.selectNodeContents(output);
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
     document.execCommand('copy');
 }
