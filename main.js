@@ -36,3 +36,10 @@ window.onload = function () {
         selectStyle.appendChild(option);
     });
 }
+
+function copyCode(){
+    var output = document.getElementById("output");
+    var range = document.createRange();
+    range.selectNodeContents(output);
+    document.execCommand('copy');
+}
