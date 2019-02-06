@@ -45,4 +45,5 @@ function copyCode(){
     selection.removeAllRanges();
     selection.addRange(range);
     document.execCommand('copy');
+    selection.removeAllRanges();
 }
